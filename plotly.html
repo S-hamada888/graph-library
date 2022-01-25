@@ -1,0 +1,29 @@
+<head>
+    <!-- Load plotly.js into the DOM -->
+    <script src='https://cdn.plot.ly/plotly-2.8.3.min.js'></script>
+</head>
+<title>plotly.js</title>
+
+<body>
+    <div id='myDiv' style="width: 800px;height: 400px;">
+        <!-- Plotly chart will be drawn inside this DIV -->
+    </div>
+
+</body>
+<script>
+    var trace1 = {
+        x: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        y: [10, 20, 30, 40, 20, 30],
+        type: 'scatter'
+    };
+
+    var trace2 = {
+        x: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
+        y: [20, 30, 40, 50, 20, 30],
+        type: 'scatter'
+    };
+
+    var data = [trace1, trace2];
+
+    Plotly.newPlot('myDiv', data);
+</script>
